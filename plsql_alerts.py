@@ -12,9 +12,9 @@ FEEDS = [
 
 KEYWORDS = ["plsql", "pl/sql", "oracle pl/sql"]
 
-MY_EMAIL = "YOUR_EMAIL_HERE"  # where you receive alerts
-SMTP_USER = "YOUR_EMAIL_HERE"
-SMTP_PASS = "YOUR_APP_PASSWORD"
+MY_EMAIL = "ANKITPATHAKSQL@GMAIL.COM"  # where you receive alerts
+SMTP_USER = "ANKITPATHAKSQL@GMAIL.COM"
+SMTP_PASS = "vslgiilukhbnfdhj"
 
 def matches_keywords(text):
     t = text.lower()
