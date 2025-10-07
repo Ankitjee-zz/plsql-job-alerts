@@ -1,1 +1,25 @@
+name: Daily PLSQL Job Alerts
 
+on:
+  schedule:
+    # Runs every day at 5:00 PM IST → 11:30 UTC
+    - cron: '30 11 * * *'
+  workflow_dispatch: # allows manual run
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install feedparser
+
+      - name: Run PLSQL alert script
+        run: python plsql_alerts.py
